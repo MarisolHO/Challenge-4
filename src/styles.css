@@ -1,0 +1,97 @@
+.wrapper {
+  color: #666;
+  width: 550px;
+  margin: 80px auto;
+  padding: 24px;
+  background-color: #fbfbfc;
+  font-family: "Aktiv Grotesk", -apple-system, BlinkMacSystemFont,
+    "San Francisco", "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+}
+.header {
+  margin: 32px 0;
+}
+.search {
+  position: relative;
+  width: 70%;
+}
+.search-input {
+  background-color: transparent;
+  border: 2px solid #cccccc;
+  color: #666;
+  padding: 6px 42px 6px 6px;
+  font-size: 20px;
+  width: 100%;
+}
+.search-icon {
+  color: #cccccc;
+  font-size: 28px;
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  height: 30px;
+  width: 30px;
+}
+.submit {
+  background-color: transparent;
+  border: 2px solid #cccccc;
+  color: #666;
+  display: block;
+  font-size: 20px;
+  padding: 6px 24px;
+  margin-left: 12px;
+}
+.weather-today {
+  padding: 0 40px 0 20px;
+  margin-bottom: 40px;
+}
+.city {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.sun {
+  display: block;
+  width: 150px;
+  margin: -20px 0;
+}
+.forecast {
+  margin-bottom: 20px;
+}
+.forecast h4 {
+  margin-bottom: 12px;
+  font-weight: normal;
+}
+.temperature p {
+  font-size: 22px;
+  text-align: center;
+  margin-top: 6px;
+}
+.card-forecast {
+  text-align: center;
+  border: 1px solid #cccccc;
+  margin-right: 8px;
+  padding: 16px 0;
+  background-color: #f7f7f8;
+}
+.card-forecast:last-child {
+  margin-right: 0;
+}
+.card-forecast h6 {
+  font-size: 20px;
+  font-weight: normal;
+  margin: 0;
+}
+.card-forecast p {
+  margin-bottom: 0;
+  font-size: 12px;
+}
+.card-forecast img {
+  width: 50px;
+  margin: 10px;
+}
+ul {
+  list-style: none;
+}
+#sky {
+  text-transform: capitalize;
+}
