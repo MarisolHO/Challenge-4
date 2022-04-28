@@ -14,82 +14,86 @@
   </head>
 
   <body>
-    <div class="wrapper container d-flex flex-column border">
-      <form id="search-form">
-        <div class="header d-flex justify-content-between">
-          <div class="search">
-            <input
-              id="search-text-input"
-              type="text"
-              placeholder="Enter a city"
-              class="search-input"
-            />
-            <i class="fas fa-search fa-fw search-icon"></i>
-          </div>
-          <button type="submit" class="submit">Search</button>
-          <button id="current-button" type="button" class="submit">Current</button>
-        </div>
+      <div class="wrapper container d-flex flex-column">
+        <div class="weather-wrapper border">
+          <form id="search-form">
+            <div class="header d-flex justify-content-between">
+              <div class="search">
+                <input
+                  id="search-text-input"
+                  type="text"
+                  placeholder="Enter a city"
+                  class="search-input"
+                />
+                <i class="fas fa-search fa-fw search-icon"></i>
+              </div>
+              <button type="submit" class="submit">Search</button>
+              <button id="current-button" type="button" class="submit">Current</button>
+            </div>
 
-      </form>
-      <div class="weather-today d-flex justify-content-between">
-        <div class="city">
-          <h1 id="city">Mexico city</h1>
-          <p id="date">
-            <span id="time">Sunday 11:00 </span><br />
-            <span id="sky">Sunny</span>
-          </p>
-        </div>
-        <div class="temperature">
-          <img class="sun" src="images/sun.png" />
-          <p>
-            <span id="temperature">32</span>
-            <span class="units">
-              <a href="#" id="celsius-link">°C</a> |
-              <a href="#" id="fahrenheit-link">°F</a>
-            </span>
-            <div class="col">
-              <ul class="today-orther-info">
-                <li id="humidity">Humidity: 78%</li>
-                <li id="windSpeed">Wind: 11km/h</li>
-              </ul>
+          </form>
+          <div class="weather-today d-flex justify-content-between">
+            <div class="city">
+              <h1 id="city">Mexico city</h1>
+              <p id="date">
+                <span id="time">Sunday 11:00 </span><br />
+                <span id="sky">Sunny</span>
+              </p>
             </div>
-          </p>
-        </div>
-      </div>
-      <div class="forecast">
-        <h4>5 days forecast</h4>
-        <div class="container week-forecast">
-          <div class="row">
-            <div class="col card-forecast">
-              <h6>Mon</h6>
-              <img src="images/sun.png" />
-              <p>36°/ 28°</p>
-            </div>
-            <div class="col card-forecast">
-              <h6>Tue</h6>
-              <img src="images/rainy.png" />
-              <p>26°/ 12°</p>
-            </div>
-            <div class="col card-forecast">
-              <h6>Wed</h6>
-              <img src="images/sun-rainy.png" />
-              <p>30°/ 16°</p>
-            </div>
-            <div class="col card-forecast">
-              <h6>Thu</h6>
-              <img src="images/sun-rainy.png" />
-              <p>32°/ 18°</p>
-            </div>
-            <div class="col card-forecast">
-              <h6>Fri</h6>
-              <img src="images/sun.png" />
-              <p>34°/ 28°</p>
+            <div class="temperature">
+              <img class="sun" src="images/sun.png" />
+              <p>
+                <span id="temperature">32</span>
+                <span class="units">
+                  <a href="#" id="celsius-link">°C</a> |
+                  <a href="#" id="fahrenheit-link">°F</a>
+                </span>
+                <div class="col">
+                  <ul class="today-orther-info">
+                    <li id="humidity">Humidity: 78%</li>
+                    <li id="windSpeed">Wind: 11km/h</li>
+                  </ul>
+                </div>
+              </p>
             </div>
           </div>
+          <div class="forecast">
+            <h4>5 days forecast</h4>
+            <div class="container week-forecast">
+              <div class="row">
+                <div class="col card-forecast">
+                  <h6>Mon</h6>
+                  <img src="images/sun.png" />
+                  <p>36°/ 28°</p>
+                </div>
+                <div class="col card-forecast">
+                  <h6>Tue</h6>
+                  <img src="images/rainy.png" />
+                  <p>26°/ 12°</p>
+                </div>
+                <div class="col card-forecast">
+                  <h6>Wed</h6>
+                  <img src="images/sun-rainy.png" />
+                  <p>30°/ 16°</p>
+                </div>
+                <div class="col card-forecast">
+                  <h6>Thu</h6>
+                  <img src="images/sun-rainy.png" />
+                  <p>32°/ 18°</p>
+                </div>
+                <div class="col card-forecast">
+                  <h6>Fri</h6>
+                  <img src="images/sun.png" />
+                  <p>34°/ 28°</p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
+        <p class="open-source">
+          <a href="https://github.com/MarisolHO/weather-app">Open-source code</a> by Marisol HO
+        </p>
       </div>
-    </div>
-
     <script
       src="https://kit.fontawesome.com/f9738977d9.js"
       crossorigin="anonymous"

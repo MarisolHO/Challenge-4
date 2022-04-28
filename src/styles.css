@@ -1,11 +1,13 @@
 .wrapper {
   color: #666;
   width: 550px;
-  margin: 80px auto;
-  padding: 24px;
-  background-color: #fbfbfc;
+  margin: 80px auto 0;
   font-family: "Aktiv Grotesk", -apple-system, BlinkMacSystemFont,
     "San Francisco", "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+}
+.weather-wrapper {
+  background-color: #fbfbfc;
+  padding: 24px;
 }
 .header {
   margin: 32px 0;
@@ -94,4 +96,8 @@ ul {
 }
 #sky {
   text-transform: capitalize;
+}
+
+.open-source {
+  margin-top: 0;
 }
