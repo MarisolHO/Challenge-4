@@ -68,12 +68,20 @@ function showFahrenheitTemperature(event) {
   let currentTemp = document.querySelector("#temperature");
   let FahrenheitTemperature= (celsiusTemperature * 9) /5 + 32;
   currentTemp.innerHTML=Math.round(FahrenheitTemperature);
+  let celsiusLink = document.querySelector("#celsius-link");
+  let fahrenheitLink = document.querySelector("#fahrenheit-link");
+  celsiusLink.removeAttribute("class");
+  fahrenheitLink.setAttribute("class", "active");
 }
 
 function showCelsiusTemperature(event) {
   event.preventDefault();
   let currentTemp = document.querySelector("#temperature");
   currentTemp.innerHTML = Math.round(celsiusTemperature);
+  let celsiusLink = document.querySelector("#celsius-link");
+  let fahrenheitLink = document.querySelector("#fahrenheit-link");
+  fahrenheitLink.removeAttribute("class");
+  celsiusLink.setAttribute("class", "active");
 }
 
 
