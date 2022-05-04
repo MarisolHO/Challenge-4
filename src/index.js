@@ -34,7 +34,6 @@ let apiUrl = `https://api.openweathermap.org/data/2.5/weather?appid=${apiKey}&un
 function showTemperature(response) {
   let currentTemp = document.querySelector("#temperature");
   currentTemp.innerHTML = Math.round(response.data.main.temp);
-  console.log(response);
 
   let weatherDescription = document.querySelector("#sky");
   weatherDescription.innerHTML = response.data.weather[0].description;
@@ -52,6 +51,9 @@ function showTemperature(response) {
   iconElement.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
 
   iconElement.setAttribute("alt", response.data.weather[0].description);
+
+  celsiusTemperature = response.data.main.temp;
+
 }
 
 function search(event) {
@@ -61,8 +63,32 @@ function search(event) {
   axios.get(`${apiUrl}q=${searchValue}`).then(showTemperature);
 }
 
+function showFahrenheitTemperature(event) {
+  event.preventDefault();
+  let currentTemp = document.querySelector("#temperature");
+  let FahrenheitTemperature= (celsiusTemperature * 9) /5 + 32;
+  currentTemp.innerHTML=Math.round(FahrenheitTemperature);
+}
+
+function showCelsiusTemperature(event) {
+  event.preventDefault();
+  let currentTemp = document.querySelector("#temperature");
+  currentTemp.innerHTML = Math.round(celsiusTemperature);
+}
+
+
+let celsiusTemperature= null;
+
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", search);
+
+let fahrenheitLink = document.querySelector("#fahrenheit-link")
+fahrenheitLink.addEventListener("click", showFahrenheitTemperature);
+
+let celsiusLink = document.querySelector("#celsius-link")
+celsiusLink.addEventListener("click", showCelsiusTemperature);
+
+
 
 // geo location
 
