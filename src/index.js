@@ -116,13 +116,13 @@ button.addEventListener("click", getCurrentPosition);
 axios.get(`${apiUrl}q=mexico city`).then(showTemperature);
 
 function displayForecast() {
-  let days = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+  let days = ["Mon", "Tue", "Wed", "Thu", "Fri", ];
   let forecast = "";
 
   days.forEach(function (day) {
     forecast += `<div class="col card-forecast">
       <h6>${day}</h6>
-      <img src="images/sun.png" />
+      <img src="public/images/sun.png" />
       <p class="forecast-temperatures"><span class="temperature-max">36°</span>/<span class="temperature-min">28°</span></p>
     </div>`
   });
