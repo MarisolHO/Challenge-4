@@ -32,6 +32,7 @@ let apiKey = "e3f308dbc1f40462b7213a15fa40687f";
 let apiUrl = `https://api.openweathermap.org/data/2.5/weather?appid=${apiKey}&units=metric&`;
 
 function showTemperature(response) {
+  console.log(response)
   let currentTemp = document.querySelector("#temperature");
   currentTemp.innerHTML = Math.round(response.data.main.temp);
 
@@ -113,3 +114,21 @@ let button = document.querySelector("#current-button");
 button.addEventListener("click", getCurrentPosition);
 
 axios.get(`${apiUrl}q=mexico city`).then(showTemperature);
+
+function displayForecast() {
+  let days = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+  let forecast = "";
+
+  days.forEach(function (day) {
+    forecast += `<div class="col card-forecast">
+      <h6>${day}</h6>
+      <img src="images/sun.png" />
+      <p class="forecast-temperatures"><span class="temperature-max">36°</span>/<span class="temperature-min">28°</span></p>
+    </div>`
+  });
+
+  let cardNode = document.querySelector("#cards");
+  cardNode.innerHTML = forecast;
+}
+
+displayForecast();

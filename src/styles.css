@@ -68,6 +68,9 @@
   text-align: center;
   margin-top: 6px;
 }
+.temperature-min {
+  opacity: .8;
+}
 .card-forecast {
   text-align: center;
   border: 1px solid #cccccc;
