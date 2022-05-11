@@ -28,8 +28,17 @@ p.innerHTML = ` ${day} ${getTime()}`;
  * End static
  */
 
-let apiKey = "e3f308dbc1f40462b7213a15fa40687f";
+const apiKey = "e3f308dbc1f40462b7213a15fa40687f";
 let apiUrl = `https://api.openweathermap.org/data/2.5/weather?appid=${apiKey}&units=metric&`;
+
+
+function getforecast(coordinates){
+  console.log(coordinates);
+  let apiUrl= `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
+console.log(apiUrl);
+axios.get(apiUrl).then(displayForecast);
+}
+
 
 function showTemperature(response) {
   console.log(response)
@@ -55,6 +64,7 @@ function showTemperature(response) {
 
   celsiusTemperature = response.data.main.temp;
 
+  getforecast(response.data.coord);
 }
 
 function search(event) {
@@ -115,7 +125,8 @@ button.addEventListener("click", getCurrentPosition);
 
 axios.get(`${apiUrl}q=mexico city`).then(showTemperature);
 
-function displayForecast() {
+function displayForecast(response) {
+  console.log(response.data.daily);
   let days = ["Mon", "Tue", "Wed", "Thu", "Fri", ];
   let forecast = "";
 
@@ -131,4 +142,4 @@ function displayForecast() {
   cardNode.innerHTML = forecast;
 }
 
-displayForecast();
+
