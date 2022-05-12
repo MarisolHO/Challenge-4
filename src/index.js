@@ -24,6 +24,16 @@ let day = days[now.getDay()];
 
 p.innerHTML = ` ${day} ${getTime()}`;
 
+
+function formatDay(timestamp){
+let date = new Date(timestamp * 1000);
+let day = date.getDay();
+let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+
+return days[day];
+
+}
+
 /**
  * End static
  */
@@ -126,16 +136,18 @@ button.addEventListener("click", getCurrentPosition);
 axios.get(`${apiUrl}q=mexico city`).then(showTemperature);
 
 function displayForecast(response) {
-  console.log(response.data.daily);
-  let days = ["Mon", "Tue", "Wed", "Thu", "Fri", ];
+  let forecastInfo = response.data.daily;
+ 
   let forecast = "";
 
-  days.forEach(function (day) {
+  forecastInfo.forEach(function (forecastDay, index) {
+    if (index < 5) {
     forecast += `<div class="col card-forecast">
-      <h6>${day}</h6>
-      <img src="public/images/sun.png" />
-      <p class="forecast-temperatures"><span class="temperature-max">36°</span>/<span class="temperature-min">28°</span></p>
+      <h6>${formatDay(forecastDay.dt)}</h6>
+      <img src="http://openweathermap.org/img/wn/${forecastDay.weather[0].icon}@2x.png"/>
+      <p class="forecast-temperatures"><span class="temperature-max">${Math.round(forecastDay.temp.max)}°</span>/<span class="temperature-min">${Math.round(forecastDay.temp.min)}°</span></p>
     </div>`
+    }
   });
 
   let cardNode = document.querySelector("#cards");
