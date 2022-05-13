@@ -1,13 +1,15 @@
 .wrapper {
   color: #666;
   width: 550px;
-  margin: 80px auto 0;
+  margin: 50px auto 0;
   font-family: "Aktiv Grotesk", -apple-system, BlinkMacSystemFont,
     "San Francisco", "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
 }
-.weather-wrapper {
+.weather-wrapper  {
   background-color: #fbfbfc;
   padding: 24px;
+  border-radius:10px;
+  
 }
 .header {
   margin: 32px 0;
@@ -19,6 +21,7 @@
 .search-input {
   background-color: transparent;
   border: 2px solid #cccccc;
+  border-radius: 10px;
   color: #666;
   padding: 6px 42px 6px 6px;
   font-size: 20px;
@@ -36,6 +39,7 @@
 .submit {
   background-color: transparent;
   border: 2px solid #cccccc;
+  border-radius: 10px;
   color: #666;
   display: block;
   font-size: 20px;
@@ -74,6 +78,7 @@
 .card-forecast {
   text-align: center;
   border: 1px solid #cccccc;
+  border-radius: 10px;
   margin-right: 8px;
   padding: 16px 0;
   background-color: #f7f7f8;
@@ -103,6 +108,7 @@ ul {
 
 .open-source {
   margin-top: 0;
+  padding:20px;
 }
 
 .units > a {
